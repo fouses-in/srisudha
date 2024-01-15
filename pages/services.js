@@ -3,8 +3,9 @@ import React from "react";
 import Header from "../components/layout/header";
 import HeroImage from "../components/common/headerImage";
 import CustomBorder from "../components/common/border";
-import { SerivcesOverView } from "../constants/services";
+import { SerivcesOverView, ServicesConstant } from "../constants/services";
 import CompanyList from "../components/common/companies";
+import Image from "next/image";
 
 export default function Services() {
   return (
@@ -68,6 +69,11 @@ export default function Services() {
           <CourseOverViewCard value={value} />
         ))}
       </section>
+      <section className="max-w-[1232px] mx-auto px-4 pb-16 grid py-8 grid-cols-3 gap-8 gap-y-10  ">
+        {ServicesConstant.map((value) => (
+          <ServiceCard value={value} />
+        ))}
+      </section>
       <CompanyList />
     </div>
   );
@@ -93,6 +99,31 @@ function CourseOverViewCard({ value }) {
         </button>
       </div>
       <div className="absolute hidden group-hover:block group-hover:bg-black inset-0 group-hover:bg-opacity-90 " />
+    </div>
+  );
+}
+
+function ServiceCard({ value }) {
+  return (
+    <div className="hover:testiCardHover relative flex group   cursor-pointer flex-col items-center p-3 py-6">
+      <div className="w-full rounded-md overflow-hidden h-40 relative">
+        <Image
+          src={`/service/${value.image}`}
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
+      <div className="relative z-30 flex-1 flex flex-col items-center">
+        <p className="mt-6 max-w-72 text-primary  font-semibold text-xl text-center">
+          {value.label}
+        </p>
+        <p className="mt-4 flex-1 text-center font-light  ">
+          {value.description}
+        </p>
+        <button className="px-4   py-1.5 mt-6 bg-black text-white text-sm">
+          Read more
+        </button>
+      </div>
     </div>
   );
 }

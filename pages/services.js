@@ -6,6 +6,7 @@ import CustomBorder from "../components/common/border";
 import { SerivcesOverView, ServicesConstant } from "../constants/services";
 import CompanyList from "../components/common/companies";
 import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa6";
 
 export default function Services() {
   return (
@@ -120,9 +121,17 @@ function ServiceCard({ value }) {
         <p className="mt-4 flex-1 text-center font-light  ">
           {value.description}
         </p>
-        <button className="px-4   py-1.5 mt-6 bg-black text-white text-sm">
-          Read more
-        </button>
+        <div className="flex items-center group mt-8">
+          <button className="px-4 text-black group-hover:text-white transition-all duration-300 font-semibold self-stretch relative  py-1.5    text-sm">
+            <div className="absolute flex flex-row-reverse top-0 bottom-0 left-full right-0 group-hover:bg-black group-hover:left-0 transition-all duration-300 "></div>
+            <span className="group-hover:text-white relative z-20">
+              Read more
+            </span>
+          </button>
+          <div className="bg-primary text-white p-2.5">
+            <FaArrowRight className="h-3.5 w-3.5" />
+          </div>
+        </div>
       </div>
     </div>
   );

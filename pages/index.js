@@ -12,6 +12,7 @@ import { MdOutlineWifiCalling3 } from "react-icons/md";
 import { IoMailUnreadOutline } from "react-icons/io5";
 import { FaRegAddressCard } from "react-icons/fa6";
 import Covers from "../components/home/cover";
+import Footer from "../components/layout/footer";
 
 export default function Home() {
   return (
@@ -95,6 +96,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

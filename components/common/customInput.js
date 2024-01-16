@@ -56,7 +56,7 @@ export default function CustomInput({
       )}
 
       {errors[name] && touched[name] && showError && (
-        <h2 className="ml-1 text-start text-sm  font-light text-red-400">
+        <h2 className="ml-1 text-start text-sm   text-red-400">
           {errors[name]}
         </h2>
       )}

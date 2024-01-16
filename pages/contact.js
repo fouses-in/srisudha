@@ -5,6 +5,18 @@ import HeroImage from "../components/common/headerImage";
 import CustomBorder from "../components/common/border";
 import CustomInput from "../components/common/customInput";
 import CompanyList from "../components/common/companies";
+import { Formik } from "formik";
+import axios from "axios";
+import * as Yup from "yup";
+import { toast } from "react-toastify";
+import { url } from "../constants";
+
+const schema = new Yup.ObjectSchema({
+  name: Yup.string().required("Name is required"),
+  number: Yup.string().required("Number is required"),
+  email: Yup.string().required("Email is required"),
+  description: Yup.string().required("Description is required"),
+});
 
 export default function Contact() {
   return (
@@ -50,8 +62,8 @@ export default function Contact() {
                   value: "+91 9843045936",
                   another: "+91 9843045936",
                 },
-              ].map((value) => (
-                <div className="flex gap-6 w-full">
+              ].map((value, index) => (
+                <div key={index} className="flex gap-6 w-full">
                   <section className=" w-12 flex-shrink-0 h-12 flex items-center justify-center self-start mt-2 rounded-full bg-primary bg-opacity-60 ">
                     <i className={`${value.icon} text-black  text-xl`}></i>
                   </section>
@@ -72,44 +84,103 @@ export default function Contact() {
             <p className="text-gray-500">
               Fields marked with an * are required
             </p>
-            <div>
-              <div className="mt-6 flex flex-col gap-8">
-                <CustomInput
-                  name="name"
-                  errors={{}}
-                  label="Name*"
-                  title={true}
-                  placeholder={"Enter your full name"}
-                />
-                <CustomInput
-                  name="email"
-                  errors={{}}
-                  label="Email*"
-                  title={true}
-                  type="email"
-                  placeholder={"Enter your email address"}
-                />
-                <CustomInput
-                  name="number"
-                  errors={{}}
-                  label="Phone Number*"
-                  title={true}
-                  placeholder={"Enter your phone number"}
-                />
-                <CustomInput
-                  name="description"
-                  errors={{}}
-                  textarea={true}
-                  height={"h-44"}
-                  label="Description*"
-                  title={true}
-                  placeholder={"Please elaborate your requirements"}
-                />
-              </div>
-              <button className="mt-12 bg-primaryText text-white uppercase w-40 h-10 text-sm">
-                Submit
-              </button>
-            </div>
+            <Formik
+              validationSchema={schema}
+              initialValues={{
+                name: "",
+                email: "",
+                number: "",
+                description: "",
+              }}
+              onSubmit={async (values, { setSubmitting, resetForm }) => {
+                try {
+                  setSubmitting(true);
+                  const { data } = await axios.post(
+                    `${url}/add/contact`,
+                    values
+                  );
+                  resetForm({
+                    values: {
+                      name: "",
+                      email: "",
+                      number: "",
+                      description: "",
+                    },
+                  });
+                  toast.success("Thank you for contacting with us.");
+                } catch (err) {
+                  toast.error(
+                    err?.response?.data?.message ?? "Something went wrong"
+                  );
+                }
+              }}
+            >
+              {({
+                values,
+                errors,
+                touched,
+                handleChange,
+                handleSubmit,
+                setFieldValue,
+                isSubmitting,
+              }) => {
+                return (
+                  <div>
+                    <div className="mt-6 flex flex-col gap-8">
+                      <CustomInput
+                        value={values.name}
+                        onChange={handleChange}
+                        name="name"
+                        errors={errors}
+                        touched={touched}
+                        label="Name*"
+                        title={true}
+                        placeholder={"Enter your full name"}
+                      />
+                      <CustomInput
+                        value={values.email}
+                        onChange={handleChange}
+                        name="email"
+                        errors={errors}
+                        touched={touched}
+                        label="Email*"
+                        title={true}
+                        type="email"
+                        placeholder={"Enter your email address"}
+                      />
+                      <CustomInput
+                        value={values.number}
+                        onChange={handleChange}
+                        name="number"
+                        errors={errors}
+                        touched={touched}
+                        label="Phone Number*"
+                        title={true}
+                        placeholder={"Enter your phone number"}
+                      />
+                      <CustomInput
+                        value={values.description}
+                        onChange={handleChange}
+                        name="description"
+                        errors={errors}
+                        touched={touched}
+                        textarea={true}
+                        height={"h-44"}
+                        label="Description*"
+                        title={true}
+                        placeholder={"Please elaborate your requirements"}
+                      />
+                    </div>
+                    <button
+                      onClick={handleSubmit}
+                      className="mt-12 bg-primaryText text-white uppercase w-40 h-10 text-sm"
+                    >
+                      {isSubmitting ? "Processing" : "Submit"}
+                    </button>
+                  </div>
+                );
+              }}
+            </Formik>
           </div>
         </div>
       </div>

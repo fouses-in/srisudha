@@ -22,8 +22,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <section className="h-[898px] relative w-full bg-cover bg-right bg-sliderbg ">
-        <div className="absolute bottom-[84px] right-28 h-[720px]  w-[700px]">
+      <section className="h-[650px] md:h-[898px] relative w-full bg-cover bg-right bg-sliderbg ">
+        <div className="absolute hidden  bottom-[84px] right-28 h-[720px]  w-[700px]">
           <Image src={"/home/slider1.png"} layout="fill" objectFit="cover" />
         </div>
         <div className="absolute top-1/2 -translate-y-1/2   right-6 h-16 w-56">
@@ -40,9 +40,9 @@ export default function Home() {
       <div className="bg-[url('/home/teamanoth.jpeg')] mt-20 bg-cover bg-no-repeat  bg-bottom-center  w-full aspect-[899/250]">
         <div className="bg-[url('/home/justbg.png')] bg-cover bg-right-top w-full   h-full" />
       </div>
-      <div className="pt-[85px] pb-[125px]  bg-[url('/home/storybg.png')] bg-left-top">
-        <div className="flex py-10  justify-between gap-4 items-start ">
-          <div className=" max-w-xl pt-4 text-black  font-Nunito text-center space-y-1 mx-auto leading-[56px] text-[52px]">
+      <div className="md:pt-[85px] py-10 px-6 md:px-0 md:pb-[125px]  md:bg-[url('/home/storybg.png')] bg-left-top">
+        <div className="flex flex-col md:flex-row py-10  justify-between gap-4 items-start ">
+          <div className=" md:max-w-xl pt-4 text-black  font-Nunito text-center space-y-1 mx-auto leading-[36px] md:leading-[56px] md:text-[52px] text-[32px]">
             <div className="h-1 mb-2  w-20 bg-primary" />
             <p>
               <span className="font-bold font-Bitter">We're here </span> to
@@ -50,7 +50,7 @@ export default function Home() {
             </p>
             <p>story & more news</p>
           </div>
-          <p className="w-2/5 mt-4 flex-shrink-0 text-lg leading-7 text-gray-700 font-light font-Nunito">
+          <p className="w-full md:w-2/5 mt-4 flex-shrink-0 text-lg leading-7 text-gray-700 font-light font-Nunito">
             Empowering Your Business with Expert Insights and Strategies –
             Srisudha Consultancy’s Blog
           </p>

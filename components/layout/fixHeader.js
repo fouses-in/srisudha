@@ -8,7 +8,7 @@ export default function FixHeader({ data }) {
   const [show, setShow] = useState(false);
   const router = useRouter(null);
   return (
-    <div className=" flex-1 px-10 absolute left-0 rounded-md h-16 bottom-0 translate-y-1/2  right-0  bg-black z-50    hidden md:flex text-15 text-gray-600 font-medium  flex-row gap-10">
+    <div className=" flex-1 px-10 absolute left-0 rounded-md h-16 bottom-0 translate-y-1/2  right-0  bg-black z-50    hidden xl:flex text-15 text-gray-600 font-medium  flex-row gap-10">
       {[
         { name: "Services", link: "/services" },
         {

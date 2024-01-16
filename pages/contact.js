@@ -4,6 +4,7 @@ import Header from "../components/layout/header";
 import HeroImage from "../components/common/headerImage";
 import CustomBorder from "../components/common/border";
 import CustomInput from "../components/common/customInput";
+import CompanyList from "../components/common/companies";
 
 export default function Contact() {
   return (
@@ -16,13 +17,13 @@ export default function Contact() {
       <Header />
       <HeroImage title="Contact" subtitle="Home - Contact Us" />
       <div className="bg-blue-50 py-20">
-        <div className="  grid grid-cols-2 gap-16 mx-auto max-w-monitor">
+        <div className="  grid md:grid-cols-2 gap-16 mx-auto px-6 xl:px-0  max-w-monitor">
           <div>
             <div className="flex gap-4 text-primary items-center">
               <CustomBorder width="w-12" />
               <p className="text-black font-medium">Contact Us</p>
             </div>
-            <h2 className="text-[46px] mt-4 max-w-xl text-black font-semibold leading-[56px] ">
+            <h2 className="text-[32px] lg:text-[46px] mt-4 max-w-xl text-black font-semibold leading-[32px] lg:leading-[56px] ">
               If need any info{" "}
               <p>
                 please contact <span className="text-primary">us!</span>
@@ -51,11 +52,11 @@ export default function Contact() {
                 },
               ].map((value) => (
                 <div className="flex gap-6 w-full">
-                  <section className=" w-12 h-12 flex items-center justify-center self-start mt-2 rounded-full bg-primary bg-opacity-60 ">
+                  <section className=" w-12 flex-shrink-0 h-12 flex items-center justify-center self-start mt-2 rounded-full bg-primary bg-opacity-60 ">
                     <i className={`${value.icon} text-black  text-xl`}></i>
                   </section>
                   <section className=" max-w-sm">
-                    <h2 className="font-semibold font-Bitter text-xl text-black">
+                    <h2 className="font-semibold font-Bitter text-lg lg:text-xl text-black">
                       {value.label}
                     </h2>
                     <div className="mt-2  text-gray-600 font-normal">
@@ -111,6 +112,9 @@ export default function Contact() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="pt-10 px-4 md:px-0 ">
+        <CompanyList />
       </div>
     </div>
   );

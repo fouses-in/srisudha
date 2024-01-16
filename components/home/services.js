@@ -31,16 +31,16 @@ export default function Services() {
     ];
   }, []);
   return (
-    <div className="py-14 text-black  bg-[url('/home/bestService.jpeg')] bg-cover">
+    <div className="py-14 text-black px-6 md:px-0  bg-[url('/home/bestService.jpeg')] bg-cover">
       <div className="max-w-1200 mx-auto">
-        <div className="text-center  leading-[56px] text-[44px] ">
+        <div className="text-center  leading-[40px] lg:leading-[52px] text-black text-[32px] md:text-[40px]">
           <p>
             <span className="font-semibold">We are</span> giving the best
           </p>
           <p>services for you.</p>
         </div>
-        <div className="flex mt-14">
-          <div className="w-1/2 z-50 flex flex-col gap-2">
+        <div className="flex flex-col md:flex-row mt-14">
+          <div className="w-full md:w-1/2 z-50 flex flex-col gap-2">
             {services.map((value, index) => (
               <div
                 onClick={() => {
@@ -49,13 +49,15 @@ export default function Services() {
                 className={`py-6 cursor-pointer px-6 duration-200 transition-all ${
                   selected != index
                     ? "bg-blackText text-white translate-x-0"
-                    : "bg-white text-black z-50 translate-x-7"
+                    : "bg-white text-black z-50 md:translate-x-7"
                 }`}
               >
                 <div>
-                  <p className="font-semibold text-2xl">{value.title}</p>
+                  <p className="font-semibold text-xl md:text-2xl">
+                    {value.title}
+                  </p>
                   <p
-                    className={`text-[15px] mt-2 ${
+                    className={`md:text-[15px] mt-2 text-sm  ${
                       selected != index ? "text-gray-400" : "text-gray-600"
                     }`}
                   >
@@ -65,7 +67,7 @@ export default function Services() {
               </div>
             ))}
           </div>
-          <div className="w-1/2 overflow-hidden  relative h-96">
+          <div className="w-full md:w-1/2 overflow-hidden  relative h-96">
             {services.map((value, index) => (
               <div
                 className={`absolute bg-black w-full h-full transition-all duration-200    ${

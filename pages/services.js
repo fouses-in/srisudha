@@ -18,15 +18,15 @@ export default function Services() {
       </Head>
       <Header />
       <HeroImage title="Services" subtitle="Home - Services" />
-      <section className=" mx-auto max-w-1200  py-20">
+      <section className=" mx-auto max-w-1200  py-8 xl:py-20">
         <div>
-          <div className="grid px-10 mt-4 grid-cols-2 gap-10">
+          <div className="grid px-6 xl:px-10 mt-4 md:grid-cols-2 gap-6 lg:gap-10">
             <div>
               <div className="flex gap-4 text-primary items-center">
                 <CustomBorder />
                 <p>Services</p>
               </div>
-              <h2 className="text-[38px] text-black font-bold leading-[46px] ">
+              <h2 className=" text-[28px] xl:text-[38px] text-black font-bold leading-[36px] xl:leading-[46px] ">
                 Comprehensive Business Solutions: Unlock Your Company’s
                 Potential with Srisudha Consultancy Services
               </h2>
@@ -49,7 +49,7 @@ export default function Services() {
                   At Srisudha Consultancy
                 </p>
               </div>
-              <h3 className="text-gray-500 mt-2 font-normal font-Nunito  leading-8 text-base ">
+              <h3 className="text-gray-500 mt-2 text-justify xl:text-start font-normal font-Nunito  leading-8 text-base ">
                 We provide an extensive range of services to cater to your
                 business needs, with a team of experienced Chartered Accountants
                 and Cost Accountants on board. We take pride in offering
@@ -65,12 +65,12 @@ export default function Services() {
           </div>
         </div>
       </section>
-      <section className="max-w-[1232px] mx-auto px-4 grid py-20 grid-cols-3 gap-8  ">
+      <section className="xl:max-w-[1232px] flex flex-row overflow-scroll no-scrollbar mx-auto px-4 md:grid py-12 pt-16 md:py-20 grid-cols-1 md:grid-cols-3 gap-8  ">
         {SerivcesOverView.map((value) => (
           <CourseOverViewCard value={value} />
         ))}
       </section>
-      <section className="max-w-[1232px] mx-auto px-4 pb-16 grid py-8 grid-cols-3 gap-8 gap-y-10  ">
+      <section className="max-w-[1232px]  mx-auto px-4 pb-12 md:pb-16 grid py-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-10  ">
         {ServicesConstant.map((value) => (
           <ServiceCard value={value} />
         ))}
@@ -82,7 +82,7 @@ export default function Services() {
 
 function CourseOverViewCard({ value }) {
   return (
-    <div className="testiCardHover relative flex group hover:bg-[url('/home/cover/cover3.jpeg')]    cursor-pointer  flex-col items-center px-8 pb-8">
+    <div className="testiCardHover w-full sm:w-1/2 md:w-full flex-shrink-0 relative flex group hover:bg-[url('/home/cover/cover3.jpeg')]    cursor-pointer  flex-col items-center px-8 pb-8">
       <div className="-mt-14 relative z-30 flex flex-col items-center">
         <div className="p-4 bg-gray-100 group-hover:bg-black  rounded-full">
           <div className="bg-white w-24 flex items-center justify-center h-24 rounded-full">
@@ -106,7 +106,7 @@ function CourseOverViewCard({ value }) {
 
 function ServiceCard({ value }) {
   return (
-    <div className="hover:testiCardHover relative flex group   cursor-pointer flex-col items-center p-3 py-6">
+    <div className="hover:testiCardHover hover:-translate-y-4 relative flex group   cursor-pointer flex-col items-center p-3 py-6 transition-all duration-300">
       <div className="w-full rounded-md overflow-hidden h-40 relative">
         <Image
           src={`/service/${value.image}`}

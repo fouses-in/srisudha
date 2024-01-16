@@ -16,7 +16,7 @@ export default function Team() {
       </Head>
       <Header />
       <HeroImage />
-      <div className="py-20 grid grid-cols-3 gap-8 mx-auto max-w-monitor">
+      <div className="py-6 md:py-20 px-6 xl:px-0 grid grid-cols-1 lg:grid-cols-3 gap-8 mx-auto max-w-monitor">
         <div>
           <div className="flex gap-4 text-primary items-center">
             <CustomBorder />
@@ -58,12 +58,12 @@ export default function Team() {
                 ))}
               </div>
             </div>
-            <h2 className="text-[40px] text-black font-bold leading-[46px] ">
+            <h2 className="text-[32px] lg:text-[40px]  text-black font-bold leading-[32px] lg:leading-[46px] ">
               We always work with a great team.
             </h2>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-6 col-span-2">
+        <div className="grid sm:grid-cols-2 gap-8 sm:gap-6 lg:col-span-2">
           {teams.slice(0, 2).map((value) => (
             <div className=" flex group cursor-pointer   flex-col items-center gap-3">
               <div className="w-full aspect-square relative">
@@ -93,7 +93,7 @@ export default function Team() {
           ))}
         </div>
       </div>
-      <section className="grid pt-6 pb-10 mx-auto max-w-monitor grid-cols-4 gap-y-14 gap-10">
+      <section className="grid px-6 xl:px-0 pt-6 pb-10 mx-auto max-w-monitor grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-2 sm:gap-y-14 gap-x-10">
         {teams.slice(2).map((value) => (
           <div className="flex flex-col group cursor-pointer items-center py-10 hover:teamShadow transition-all duration-300">
             <div className="relative group-hover:shadow-lg w-20 aspect-square rounded-full overflow-hidden">

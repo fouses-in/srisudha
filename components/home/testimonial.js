@@ -4,16 +4,16 @@ import { FaStar } from "react-icons/fa";
 
 export default function Testimonials() {
   return (
-    <div className=" bg-[url('/home/team/testimonialbg.png')] pb-20 bg-cover bg-center">
+    <div className=" bg-[url('/home/team/testimonialbg.png')] px-6 md:px-0 pb-20 bg-cover bg-center">
       <div className="max-w-1200 mx-auto">
-        <div className=" max-w-lg pt-4  font-Roboto text-center space-y-1 mx-auto leading-[48px] text-[44px]">
+        <div className=" w-full md:max-w-lg pt-4  font-Roboto text-center space-y-1 mx-auto leading-[34px] md:leading-[48px] text-[36px] md:text-[44px]">
           <div className="h-1 mb-2 mx-auto w-20 bg-primary" />
           <p>
             <span className="font-semibold">We are</span> very happy to get
           </p>
           <p>client’s review!</p>
         </div>
-        <div className=" flex gap-4 overflow-y-visible pt-24 pb-10 pl-4 pr-4  overflow-scroll no-scrollbar">
+        <div className=" flex gap-4 overflow-y-visible pt-24 pb-0 md:pb-0 md:px-4  overflow-scroll no-scrollbar">
           {[
             { value: "", name: "Farhan Rio", designation: "Agent Manager" },
             { value: "", name: "Farhan Rio", designation: "Agent Manager" },

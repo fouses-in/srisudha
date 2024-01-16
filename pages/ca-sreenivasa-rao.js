@@ -15,11 +15,11 @@ export default function Founder() {
       </Head>
       <Header />
       <HeroImage title="Founder" subtitle="Home - Founder" />
-      <section className="px-24 mx-auto max-w-1200  py-20">
+      <section className=" px-6 xl:px-24 mx-auto max-w-1200 py-8  xl:py-20">
         <div>
           <CustomBorder />
-          <div className="grid mt-4 grid-cols-2 gap-10">
-            <h2 className="text-[40px] text-black font-bold leading-[46px] ">
+          <div className="grid mt-4 grid-cols-1 xl:grid-cols-2 gap-10">
+            <h2 className="text-[32px] lg:text-[40px] text-black font-bold leading-[32px] lg:leading-[46px] ">
               We will satisfy you by our work ideas
             </h2>
             <h3 className="text-gray-600 text-base font-semibold font-Roboto">
@@ -28,25 +28,27 @@ export default function Founder() {
             </h3>
           </div>
         </div>
-        <div className="mt-10 rounded-md overflow-hidden flex ">
-          <div className="w-[38%] self-stretch relative">
+        <div className="mt-10 testiCard xl:shadow-none rounded-md overflow-hidden flex flex-col sm:flex-row ">
+          <div className="w-full sm:w-[38%] h-60 sm:h-auto sm:self-stretch relative">
             <Image
               src={"/founder/sreenivasa.jpeg"}
               layout="fill"
               objectFit="cover"
             />
           </div>
-          <div className="py-10 bg-gray-50  bg-[url('/founder/background.png')] flex flex-col flex-1   px-14 ">
+          <div className="py-6 xl:py-10  bg-gray-50  bg-[url('/founder/background.png')] flex flex-col flex-1   px-4 xl:px-14 ">
             <div className="flex rounded-md overflow-hidden bg-gray-200 items-center ">
               <i className="fa-solid text-black px-8 text-2xl fa-user-gear"></i>
               <div className="py-4  px-8 text-white bg-black flex-1">
-                <p className="text-2xl">A Sreenivasa Rao</p>
-                <p className="text-gray-300 text-base font-light">
+                <p className="text-base md:text-xl xl:text-2xl">
+                  A Sreenivasa Rao
+                </p>
+                <p className="text-gray-300 text-xs md:text-base xl:font-light">
                   Chartered Accountant
                 </p>{" "}
               </div>
             </div>
-            <div className="grid mt-10 grid-cols-2 gap-4">
+            <div className="grid mt-10 xl:grid-cols-2 gap-3 xl:gap-4">
               {[
                 {
                   value: "sreenivasarao@asrfca.com",

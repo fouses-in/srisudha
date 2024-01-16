@@ -7,6 +7,8 @@ import { FaRegAddressCard } from "react-icons/fa6";
 import { IoMailUnreadOutline } from "react-icons/io5";
 import { MdOutlineWifiCalling3 } from "react-icons/md";
 import FixHeader from "./fixHeader";
+import { useCallback, useState } from "react";
+import Drawer from "./drawer";
 
 export function Logo({ height = "h-14", width = "w-44", url }) {
   const router = useRouter(null);
@@ -33,15 +35,25 @@ export function Logo({ height = "h-14", width = "w-44", url }) {
 export default function Header({ opaque = false, fixed = true }) {
   const router = useRouter();
   const detail = useSelector((state) => state.auth);
+  const [sideBarOpen, setSideBarOpen] = useState(false);
+
+  const menuHandler = () => {
+    setSideBarOpen(!sideBarOpen);
+  };
+
+  const cancelhandler = useCallback(() => {
+    setSideBarOpen(false);
+  });
 
   return (
     <header
-      className={`  max-w-1200 relative     z-50 w-full  mx-auto items-center  py-4 md:py-8 md:pb-16 `}
+      className={`  max-w-1200 relative     z-50 w-full  mx-auto items-center  py-4 md:py-6 xl:pb-16 `}
     >
-      <div className="flex  w-full justify-between">
+      <Drawer isOpen={sideBarOpen} cancelhandler={cancelhandler} />
+      <div className="flex  items-center w-full justify-between">
         <Logo height="h-[50px]" width="w-[200px]" opaque={opaque} />
 
-        <nav className="hidden   justify-end items-center text-xl font-medium  md:flex md:gap-x-20 ">
+        <nav className="hidden   justify-end items-center text-xl font-medium  xl:flex md:gap-x-20 ">
           {[
             {
               label: "Call us: +91 9843045936",
@@ -62,6 +74,9 @@ export default function Header({ opaque = false, fixed = true }) {
             <AnotherHeaderItem {...value} />
           ))}
         </nav>
+        <div onClick={menuHandler} className="mr-4 cursor-pointer xl:hidden">
+          <i class="fa-solid text-primary fa-bars text-2xl"></i>
+        </div>
       </div>
 
       <FixHeader />

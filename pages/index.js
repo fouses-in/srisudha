@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
       <Header />
       <section className="h-[650px] md:h-[898px] relative w-full bg-cover bg-right bg-sliderbg ">
-        <div className="absolute hidden  bottom-[84px] right-28 h-[720px]  w-[700px]">
+        <div className="absolute hidden md:block  bottom-[84px] right-28 h-[720px]  w-[700px]">
           <Image src={"/home/slider1.png"} layout="fill" objectFit="cover" />
         </div>
         <div className="absolute top-1/2 -translate-y-1/2   right-6 h-16 w-56">

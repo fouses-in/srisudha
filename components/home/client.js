@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Clients() {
   return (
-    <div className="bg-white px-6 xl:px-0 max-w-1200 mx-auto py-14 mb-8 pb-14">
+    <div className="bg-white px-6 xl:px-0 max-w-1200 mx-auto py-6 mb-8 pb-14">
       <div className="flex flex-col md:flex-row justify-between gap-4 items-start ">
         <p className=" max-w-lg  leading-[48px] text-[44px]">
           <span className="font-semibold">We have</span> many clients All Over

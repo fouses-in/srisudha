@@ -6,6 +6,7 @@ import CustomBorder from "../components/common/border";
 import Image from "next/image";
 import { TestimonialsContent } from "../constants/testimonial";
 import CompanyList from "../components/common/companies";
+import Footer from "../components/layout/footer";
 
 export default function Testimonials() {
   return (
@@ -43,6 +44,7 @@ export default function Testimonials() {
         </div>
         <CompanyList />
       </div>
+      <Footer />
     </div>
   );
 }

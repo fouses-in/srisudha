@@ -40,7 +40,7 @@ export default function Teams() {
             Consultancy’s Great Team of CA and CMA Professionals
           </p>
         </div>
-        <div className="mt-12 md:mt-24 mb-0 md:mb-28 justify-center flex overflow-scroll no-scrollbar gap-8">
+        <div className="mt-12 md:mt-24 mb-0 md:mb-28 md:pb-8 pb-4 justify-center flex overflow-scroll no-scrollbar gap-8">
           {[
             {
               name: "CA Sreenivasa Rao",

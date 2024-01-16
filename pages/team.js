@@ -5,6 +5,7 @@ import Head from "next/head";
 import { teams } from "../constants/team";
 import CustomBorder from "../components/common/border";
 import HeroImage from "../components/common/headerImage";
+import Footer from "../components/layout/footer";
 
 export default function Team() {
   return (
@@ -115,6 +116,7 @@ export default function Team() {
           </div>
         ))}
       </section>
+      <Footer />
     </div>
   );
 }

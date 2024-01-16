@@ -7,6 +7,7 @@ import { SerivcesOverView, ServicesConstant } from "../constants/services";
 import CompanyList from "../components/common/companies";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
+import Footer from "../components/layout/footer";
 
 export default function Services() {
   return (
@@ -76,6 +77,7 @@ export default function Services() {
         ))}
       </section>
       <CompanyList />
+      <Footer />
     </div>
   );
 }

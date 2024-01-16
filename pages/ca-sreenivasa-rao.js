@@ -4,6 +4,7 @@ import HeroImage from "../components/common/headerImage";
 import Head from "next/head";
 import CustomBorder from "../components/common/border";
 import Image from "next/image";
+import Footer from "../components/layout/footer";
 
 export default function Founder() {
   return (
@@ -100,6 +101,7 @@ export default function Founder() {
           <div></div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

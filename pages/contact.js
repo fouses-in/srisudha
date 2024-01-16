@@ -10,6 +10,7 @@ import axios from "axios";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
 import { url } from "../constants";
+import Footer from "../components/layout/footer";
 
 const schema = new Yup.ObjectSchema({
   name: Yup.string().required("Name is required"),
@@ -187,6 +188,7 @@ export default function Contact() {
       <div className="pt-10 px-4 md:px-0 ">
         <CompanyList />
       </div>
+      <Footer />
     </div>
   );
 }

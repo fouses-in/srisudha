@@ -31,7 +31,7 @@ export default function Covers() {
             onClick={() => {
               setOpen(index);
             }}
-            className={`testimonialC flex flex-col   z-50  flex-shrink-0 ${
+            className={`testimonialC flex flex-col md:flex-row   z-50  flex-shrink-0 ${
               open == index ? "flex-[2]" : "flex-1"
             } p-2 cursor-pointer bg-white`}
           >

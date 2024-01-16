@@ -13,6 +13,7 @@ import { IoMailUnreadOutline } from "react-icons/io5";
 import { FaRegAddressCard } from "react-icons/fa6";
 import Covers from "../components/home/cover";
 import Footer from "../components/layout/footer";
+import Request from "../components/home/request";
 
 export default function Home() {
   return (
@@ -38,6 +39,7 @@ export default function Home() {
       <Teams />
       <Clients />
       <Testimonials />
+      <Request />
       <div className="bg-[url('/home/teamanoth.jpeg')] mt-20 bg-cover bg-no-repeat  bg-bottom-center  w-full aspect-[899/250]">
         <div className="bg-[url('/home/justbg.png')] bg-cover bg-right-top w-full   h-full" />
       </div>

@@ -6,15 +6,15 @@ export const SerivcesOverView = [
     icon: "fa-solid fa-users",
   },
   {
-    label: "Comprehensive Diagnosis Analysis",
+    label: "Legal Compliance Scan",
     description:
-      " Discover hidden opportunities and optimize your business performance with Srisudha Consultancy Services' Comprehensive Diagnosis Analysis (CDA).",
+      "Safeguard your business with our Legal Compliance Scan (LCS), ensuring compliance and minimizing risks while navigating India's complex regulatory landscape.                            ",
     icon: "fa-solid fa-qrcode",
   },
   {
-    label: "Comprehensive Diagnosis Analysis",
+    label: "Tax Compliance & Strategy",
     description:
-      " Discover hidden opportunities and optimize your business performance with Srisudha Consultancy Services' Comprehensive Diagnosis Analysis (CDA).",
+      "Optimize your tax strategy with our Tax Compliance & Strategy (TCS) service, expertly navigating India's complex tax regulations to minimize liabilities and maximize incentives.                            ",
     icon: "fa-solid fa-users",
   },
 ];

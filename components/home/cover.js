@@ -1,9 +1,11 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 
 export default function Covers() {
   const [open, setOpen] = useState(0);
+  const router = useRouter(null);
   return (
     <div>
       <div className="flex z-[60] flex-col md:flex-row mx-auto gap-6 px-4 py-4 -mt-28 md:-mt-40 max-w-[1232px]">
@@ -67,7 +69,12 @@ export default function Covers() {
               >
                 {value.value}
               </p>
-              <button className=" font-medium pb-4 md:pb-0 flex items-center gap-2 text-white self-start mt-4 md:mt-6">
+              <button
+                onClick={() => {
+                  router.push("/contact");
+                }}
+                className=" font-medium pb-4 md:pb-0 flex items-center gap-2 text-white self-start mt-4 md:mt-6"
+              >
                 <span>Get started</span>
                 <FaArrowRight className="text-primary h-4 w-4" />
               </button>

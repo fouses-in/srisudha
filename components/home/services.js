@@ -1,8 +1,11 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React, { useMemo, useState } from "react";
+import { FaArrowRight, FaArrowRightLong } from "react-icons/fa6";
 
 export default function Services() {
   const [selected, setSelected] = useState(0);
+  const router = useRouter(null);
   const services = useMemo(() => {
     return [
       {
@@ -11,6 +14,7 @@ export default function Services() {
         description:
           "A comprehensive diagnosis analysis is essential for business growth. At Srisudha Consultancy, our expert team evaluates your organization's operations, finances, and performance to identify opportunities and risks. By pinpointing areas for improvement, we help you capitalize on opportunities, optimize processes, and ensure sustainable success.",
         image: "coorporate2.jpeg",
+        label: "*Unlocking Business Potential",
       },
       {
         title: "Legal Compliance Scan",
@@ -19,6 +23,7 @@ export default function Services() {
         description:
           "Navigating the complexities of legal compliance can be challenging, but it is crucial for the success and reputation of your business. At Srisudha Consultancy, we offer a comprehensive Legal Compliance Scan to ensure your organization adheres to all relevant regulations and requirements.",
         image: "coorporate.jpeg",
+        label: "*Safeguarding Your Business",
       },
       {
         title: "Tax Compliance & Strategy",
@@ -27,6 +32,7 @@ export default function Services() {
         description:
           "Managing tax compliance can be complex and time-consuming, but it is critical for the success of your business. At Srisudha Consultancy, we offer expert guidance and support to help you navigate tax regulations and optimize your tax strategy.",
         image: "coorporate2.jpeg",
+        label: "*Maximizing Your Business Potential",
       },
     ];
   }, []);
@@ -67,13 +73,14 @@ export default function Services() {
               </div>
             ))}
           </div>
-          <div className="w-full md:w-1/2 overflow-hidden  relative h-96">
+
+          <div className={`w-full md:w-1/2  relative h-96`}>
             {services.map((value, index) => (
               <div
                 className={`absolute bg-black w-full h-full transition-all duration-200    ${
                   selected == index
-                    ? " translate-y-0 z-30"
-                    : "translate-y-full z-10"
+                    ? " translate-y-0 z-30 opacity-100"
+                    : "translate-y-full z-10 opacity-0 "
                 }`}
               >
                 <Image
@@ -82,6 +89,25 @@ export default function Services() {
                   layout="fill"
                   objectFit="cover"
                 />
+                <div className="bg-black bg-opacity-30 inset-0 absolute" />
+                <div className="absolute -top-4  border-t-4 border-primary left-14 right-16 max-w-sm  bg-white px-6 py-6">
+                  <p className=" font-Poppins font-medium">{value.title}</p>
+                  <p className="font-Roboto mt-3 text-gray-700 underline underline-offset-1">
+                    {value.label}
+                  </p>
+                  <p className="font-Nunito text-gray-600 text-[15px] mt-4">
+                    {value.description}
+                  </p>
+                  <button
+                    onClick={() => {
+                      router.push("/services");
+                    }}
+                    className="px-4 py-2 flex gap-2 items-center  bg-primary mt-8 text-white text-sm"
+                  >
+                    <span>Get Started</span>
+                    <FaArrowRightLong />
+                  </button>
+                </div>
               </div>
             ))}
           </div>

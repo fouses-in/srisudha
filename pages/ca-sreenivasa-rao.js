@@ -46,7 +46,7 @@ export default function Founder() {
                 </p>
                 <p className="text-gray-300 text-xs md:text-base xl:font-light">
                   Chartered Accountant
-                </p>{" "}
+                </p>
               </div>
             </div>
             <div className="grid mt-10 xl:grid-cols-2 gap-3 xl:gap-4">
@@ -72,9 +72,15 @@ export default function Founder() {
               ))}
             </div>
             <div className="mt-10 flex gap-8 items-center">
-              <button className="bg-primary text-white px-8 py-3 rounded-md">
-                Appointment
-              </button>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://calendly.com/srisudhaconsultancy"
+              >
+                <button className="bg-primary text-white px-8 py-3 rounded-md">
+                  Appointment
+                </button>
+              </a>
               <div className="teamShadow bg-white h-10 w-10 flex items-center justify-center rounded-full">
                 <i class="fa-brands fa-facebook-f text-primary"></i>
               </div>

@@ -37,7 +37,7 @@ export default function Home() {
       <Excellence />
       <Services />
       <Teams />
-      <Clients />
+
       <Testimonials />
       <Request />
       <div className="bg-[url('/home/teamanoth.jpeg')] mt-20 bg-cover bg-no-repeat  bg-bottom-center  w-full aspect-[899/250]">

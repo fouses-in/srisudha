@@ -7,7 +7,7 @@ import { FiUsers } from "react-icons/fi";
 
 export default function Teams() {
   return (
-    <div className="py-8 px-6 xl:px-0 md:py-14 pt-12 md:pt-20 text-black   bg-[url('/home/team/teambg.png')] bg-cover bg-center">
+    <div className="py-8 px-6  xl:px-0 md:py-14 md:pb-10 pt-12 md:pt-20 text-black   bg-[url('/home/team/teambg.png')] bg-cover bg-center">
       <div className="max-w-1200 mx-auto">
         <div className=" flex justify-between flex-col gap-10 md:gap-0 items-center md:flex-row">
           {[

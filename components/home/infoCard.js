@@ -17,9 +17,15 @@ export default function InfoCard() {
         competitive landscape.
       </p>
       <div className="flex px-2 gap-4 mt-4">
-        <div className="h-14 flex items-center justify-center rounded-full aspect-square bg-blackText">
-          <i class="fa-brands fa-youtube text-2xl text-primary"></i>
-        </div>
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://www.youtube.com/@srisudhaconsultancy"
+        >
+          <div className="h-14 flex items-center justify-center rounded-full aspect-square bg-blackText">
+            <i class="fa-brands fa-youtube text-2xl text-primary"></i>
+          </div>
+        </a>
         <button
           onClick={() => {
             router.push("/services");

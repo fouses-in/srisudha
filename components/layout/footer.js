@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaChevronRight } from "react-icons/fa6";
 
@@ -10,7 +11,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="w-full h-12 items-start flex relative">
               <Image
-                src={"/footer/consulti.png"}
+                src={"/images/logo.png"}
                 layout="fill"
                 className="  bg-left  left-0"
                 objectFit="contain"
@@ -44,11 +45,17 @@ export default function Footer() {
                 { label: "Industry Compass", path: "/services" },
                 { label: "Portfolio", path: "/services" },
                 { label: "Resources", path: "/services" },
+                { label: "Terms and Services", path: "/terms" },
+                { label: "Privacy Policy", path: "/privacy-policy" },
               ].map((value) => (
-                <div className="flex items-center gap-4 text-gray-400 font-medium text-sm ">
-                  <FaChevronRight className="h-3 w-3" />
-                  <p>{value.label}</p>
-                </div>
+                <Link href={value.path}>
+                  <a rel="noopener noreferrer">
+                    <div className="flex items-center gap-4 text-gray-400 font-medium text-sm ">
+                      <FaChevronRight className="h-3 w-3" />
+                      <p>{value.label}</p>
+                    </div>
+                  </a>
+                </Link>
               ))}
             </div>
             <div className="flex mt-12 text-white text-xl font-semibold gap-2 items-center">
@@ -66,7 +73,7 @@ export default function Footer() {
           </div>
           <div className="md:col-span-3">
             <div className="flex mt-2 text-white text-xl font-semibold gap-2 items-center">
-              <h2>Links</h2>
+              <h2>Newsletter</h2>
               <h3 className="h-[1px] flex-1 bg-gray-500" />
             </div>
             <div className="text-white text-sm  space-y-2 mt-8">

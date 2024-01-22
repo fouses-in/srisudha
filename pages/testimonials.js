@@ -42,7 +42,7 @@ export default function Testimonials() {
             <TestimonialCard value={value} />
           ))}
         </div>
-        <CompanyList />
+        {/* <CompanyList /> */}
       </div>
       <Footer />
     </div>

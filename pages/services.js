@@ -76,7 +76,7 @@ export default function Services() {
           <ServiceCard value={value} />
         ))}
       </section>
-      <CompanyList />
+      {/* <CompanyList /> */}
       <Footer />
     </div>
   );

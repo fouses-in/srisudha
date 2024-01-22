@@ -26,7 +26,7 @@ export default function FixHeader({ data }) {
             { name: "Contact Us", link: "/contact" },
           ],
         },
-        { name: "Industry Compass" },
+        { name: "Industry Compass", link: "/industry-compass" },
         { name: "Portfolio" },
         ,
         { name: "Resources +", link: "" },

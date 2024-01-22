@@ -6,8 +6,6 @@ import { useDispatch, useSelector } from "react-redux";
 
 import Image from "next/image";
 
-import ChevronRightIcon from "../icons/outline/chevronRightIcon";
-import CheveronDownIcon from "../icons/outline/cheveronDownIcon";
 import { items } from "../../models/drawerItemModel";
 import { AnotherHeaderItem } from "./headerItem";
 import { MdOutlineWifiCalling3 } from "react-icons/md";
@@ -21,7 +19,7 @@ function Drawer({ isOpen, cancelhandler }) {
 
   return (
     <div
-      className={`fixed top-0 left-0 right-0 z-50 h-full transform overflow-auto bg-black bg-opacity-60 ${
+      className={`fixed top-0 left-0 right-0 z-[60] h-full transform overflow-auto bg-black bg-opacity-60 ${
         !isOpen && "delay-200"
       } ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
       onClick={cancelhandler}
@@ -92,10 +90,10 @@ function Drawer({ isOpen, cancelhandler }) {
                     {value.childs?.map((value) => (
                       <div
                         onClick={() => {
-                          router.push(value.path);
+                          router.push(value.link);
                         }}
                         className={`hover:text-white cursor-pointer hover:bg-green-400 p-2  pl-4 rounded-md  text-sm font-normal  ${
-                          router.pathname.startsWith(value.path)
+                          router.pathname.startsWith(value.link)
                             ? "bg-primary   rounded-l-lg border-l-2 border-primary bg-opacity-20 text-white"
                             : ""
                         }`}

@@ -20,15 +20,28 @@ export default function FixHeader({ data }) {
             { name: "Our Founder", link: "/ca-sreenivasa-rao" },
 
             { name: "Faqs", link: "/team" },
-
-            { name: "Contact Us", link: "/contact" },
           ],
         },
+        { name: "Contact Us", link: "/contact" },
         { name: "Industry Compass", link: "/industry-compass" },
-        { name: "Portfolio" },
-        ,
-        { name: "Resources +", link: "" },
-        ,
+
+        {
+          name: "Login",
+
+          subheaders: [
+            {
+              name: "Client Login",
+              link: "https://client.srisudhaconsultancy.com/auth/login",
+              href: true,
+            },
+
+            {
+              name: "Employee Login",
+              link: "https://emp.srisudhaconsultancy.com",
+              href: true,
+            },
+          ],
+        },
       ].map((value) => (
         <div className="relative  h-full   group">
           <Link href={value?.link ?? ""} passHref>
@@ -53,15 +66,23 @@ export default function FixHeader({ data }) {
           {value.subheaders && (
             <div className="absolute pt-[70px]  cursor-pointer w-40 top-0 left-0 z-50 hidden group-hover:block">
               <div className="  bg-white shadow-sm border-1px opacity-100 ml-2  border-t-1px   z-50 w-52 p-1.5 transition-all duration-300">
-                {value.subheaders.map((value) => (
-                  <Link href={value.link} passHref>
-                    <a rel="noopener noreferrer">
+                {value.subheaders.map((value) =>
+                  value.href ? (
+                    <Link href={value.link} passHref>
+                      <a rel="noopener noreferrer">
+                        <div className="py-3 px-2.5 hover:bg-primary hover:text-white">
+                          <p className="text-base">{value.name}</p>
+                        </div>
+                      </a>
+                    </Link>
+                  ) : (
+                    <a href={value.link} rel="noopener noreferrer">
                       <div className="py-3 px-2.5 hover:bg-primary hover:text-white">
                         <p className="text-base">{value.name}</p>
                       </div>
                     </a>
-                  </Link>
-                ))}
+                  )
+                )}
               </div>
             </div>
           )}

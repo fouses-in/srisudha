@@ -12,22 +12,22 @@ export const items = () => [
 
       { label: "Our Founder", link: "/ca-sreenivasa-rao" },
 
-      { label: "Testimonials", link: "/testimonials" },
-
       { label: "Faqs", link: "/team" },
-
-      { label: "Contact Us", link: "/contact" },
     ],
-    // path: '/courses',
   },
+  { label: "Contact Us", link: "/contact" },
   {
     label: "Industry Compass",
+    link: "/industry-compass",
   },
+
   {
-    label: "Portfolio",
-  },
-  {
-    label: "Resources",
-    expandable: true,
+    label: "Login",
+    href: true,
+    childs: [
+      { label: "Client Login", link: "client.srisudhaconsultancy.com" },
+
+      { label: "Employee Login", link: "emp.srisudhaconsultancy.com" },
+    ],
   },
 ];

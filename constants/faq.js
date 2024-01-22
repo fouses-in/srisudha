@@ -39,4 +39,29 @@ export const FAQContent = [
     value:
       "For the IT and Software Services Industry, Srisudha Consultancy assists in financial planning, tax structuring, and navigating legal issues related to intellectual property and data privacy. Their tech industry insights and experience enable them to offer relevant and effective solutions.",
   },
+  {
+    label: "Retail Industry",
+    value:
+      "In the Retail Industry, Srisudha Consultancy provides guidance on inventory management, cash flow planning, and tax compliance, along with legal advice on consumer laws and regulations. Their services help retailers adapt to changing market dynamics and consumer behavior.",
+  },
+  {
+    label: "Agriculture and Agro-processing Industry",
+    value:
+      "Srisudha Consultancy assists with financial planning, understanding agriculture-related tax benefits, and legal issues related to land use and environmental regulations in the Agriculture and Agro-processing Industry. ",
+  },
+  {
+    label: "Tourism and Hospitality Industry",
+    value:
+      "Srisudha Consultancy helps businesses in the Tourism and Hospitality Industry with financial forecasting, tax planning, and legal aspects of licensing and regulations. The firm's knowledge of this sector enables them to provide valuable advice to clients in these industries.",
+  },
+  {
+    label: "Healthcare Services Industry",
+    value:
+      "In the Healthcare Services Industry, Srisudha Consultancy assists in managing healthcare finances, tax planning, and navigating the complex legal landscape of health regulations. The firm provides crucial support to businesses in this vital and highly regulated sector.",
+  },
+  {
+    label: "Education and Training Industry",
+    value:
+      "For the Education and Training Industry, Srisudha Consultancy provides guidance on financial sustainability, tax benefits related to education, and legal issues related to accreditation and student data privacy. Their expertise helps educational institutions and service providers navigate their unique challenges.",
+  },
 ];

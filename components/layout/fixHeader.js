@@ -19,8 +19,6 @@ export default function FixHeader({ data }) {
 
             { name: "Our Founder", link: "/ca-sreenivasa-rao" },
 
-            { name: "Testimonials", link: "/testimonials" },
-
             { name: "Faqs", link: "/team" },
 
             { name: "Contact Us", link: "/contact" },

@@ -38,7 +38,7 @@ export default function Home() {
       <Services />
       <Teams />
 
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Request />
       <div className="bg-[url('/home/teamanoth.jpeg')] mt-20 bg-cover bg-no-repeat  bg-bottom-center  w-full aspect-[899/250]">
         <div className="bg-[url('/home/justbg.png')] bg-cover bg-right-top w-full   h-full" />

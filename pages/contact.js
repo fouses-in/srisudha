@@ -185,9 +185,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <div className="pt-10 px-4 md:px-0 ">
-        <CompanyList />
-      </div>
+
       <Footer />
     </div>
   );

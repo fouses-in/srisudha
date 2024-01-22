@@ -64,7 +64,7 @@ export default function Footer() {
             </div>
             <div className="h-20 mt-4 md:mt-6 w-full relative">
               <Image
-                className=" contain"
+                className="contain"
                 src={"/home/ssl.png"}
                 layout="fill"
                 objectFit="contain"

@@ -45,7 +45,7 @@ export default function Teams() {
             {
               name: "CA Sreenivasa Rao",
               designation: "Founder & MD",
-              image: "team1.jpeg",
+              image: "sreenivasa.jpeg",
             },
             {
               name: "CMA Rajesh Kumar Mantry",
@@ -55,7 +55,7 @@ export default function Teams() {
             {
               name: "CA Shivasri Rajah",
               designation: "Audit & Tax Consultant",
-              image: "team1.jpeg",
+              image: "shivasri.jpeg",
             },
           ].map((value) => (
             <div className="flex flex-shrink-0 group hover:bg-black hover:text-white transition-all duration-150  rounded-md self-stretch md:self-start flex-col w-72 shadowC p-2 pb-4">

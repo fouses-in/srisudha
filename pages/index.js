@@ -14,6 +14,7 @@ import { FaRegAddressCard } from "react-icons/fa6";
 import Covers from "../components/home/cover";
 import Footer from "../components/layout/footer";
 import Request from "../components/home/request";
+import CompanyMap from "../components/common/map";
 
 export default function Home() {
   return (
@@ -60,9 +61,7 @@ export default function Home() {
         </div>
       </div>
       <div className="pb-6 pt-4 relative">
-        <div className="h-[380px]  w-full relative">
-          <Image src={"/home/map.webp"} layout="fill" objectFit="cover" />
-        </div>
+        <CompanyMap />
         <div className="top-0  px-10 items-start bottom-0 flex flex-col justify-center  bg-black absolute right-20">
           <div className="text-3xl mb-8 font-bold text-white">
             <p>Contact Info</p>

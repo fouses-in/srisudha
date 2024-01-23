@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.4.3",
+    "@react-google-maps/api": "^2.19.2",
     "@reduxjs/toolkit": "^1.8.3",
     "aos": "^2.3.3",
     "axios": "^0.27.2",

@@ -10,12 +10,13 @@ export default function Footer() {
         <div className="w-full px-6 xl:px-0  bg-no-repeat bg-[url('/footer/footerbg.png')]">
           <div className="grid  grid-cols-1 md:grid-cols-8 gap-10 md:gap-24 mx-auto max-w-monitor">
             <div className="md:col-span-2">
-              <div className="w-full h-12 items-start flex relative">
+              <div className="w-full h-14 items-start flex relative">
                 <Image
-                  src={"/images/logo.png"}
+                  src={"/footer/footerlogo.png"}
                   layout="fill"
                   className="  bg-left  left-0"
                   objectFit="contain"
+                  objectPosition="left"
                 />
               </div>
               <div className="text-white text-sm font-light space-y-2 mt-8">
@@ -63,13 +64,33 @@ export default function Footer() {
                 <h2>Secured By</h2>
                 <h3 className="h-[1px] flex-1 bg-gray-500" />
               </div>
-              <div className="h-20 mt-4 md:mt-6 w-full relative">
-                <Image
-                  className="contain"
-                  src={"/home/ssl.png"}
-                  layout="fill"
-                  objectFit="contain"
-                />
+              <div className="mt-4 items-center md:mt-6 flex gap-2">
+                <div className="h-24 aspect-[300/166] relative">
+                  <Image
+                    className="contain"
+                    src={"/home/ssl.png"}
+                    layout="fill"
+                    objectFit="contain"
+                    objectPosition={"left"}
+                  />
+                </div>
+                <a
+                  href="#"
+                  onClick={() => {
+                    window.open(
+                      "https://www.sitelock.com/verify.php?site=srisudhaconsultancy.com",
+                      "SiteLock",
+                      "width=600,height=600,left=160,top=170"
+                    );
+                  }}
+                >
+                  <img
+                    class="img-fluid"
+                    alt="SiteLock"
+                    title="SiteLock"
+                    src="https://shield.sitelock.com/shield/srisudhaconsultancy.com"
+                  />
+                </a>
               </div>
             </div>
             <div className="md:col-span-3">

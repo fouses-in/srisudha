@@ -24,7 +24,7 @@ export default function FixHeader({ data }) {
         },
         { name: "Contact Us", link: "/contact" },
         { name: "Industry Compass", link: "/industry-compass" },
-
+        { name: "Our Blogs", link: "/blog" },
         {
           name: "Login",
 

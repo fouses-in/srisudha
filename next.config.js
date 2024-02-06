@@ -5,7 +5,9 @@ const nextConfig = withPWA({
     dest: "public",
     buildExcludes: [/middleware-manifest\.json$/],
   },
-  env: {},
+  env: {
+    BUCKET_URL: "https://srisudha.s3.ap-south-1.amazonaws.com",
+  },
   images: {
     domains: ["srisudha.s3.ap-south-1.amazonaws.com"],
   },

@@ -7,7 +7,7 @@ export default function HeroImage({
   subtitle = "Home - Our Team",
 }) {
   return (
-    <div className="w-full h-72 relative ">
+    <div className="w-full h-72 flex-shrink-0 relative ">
       <Image src={src} layout="fill" objectFit="cover" />
       <div className="inset-0 text-white flex flex-col items-center justify-center  absolute bg-black bg-opacity-50">
         <div className="text-center">

@@ -15,8 +15,13 @@ import Covers from "../components/home/cover";
 import Footer from "../components/layout/footer";
 import Request from "../components/home/request";
 import CompanyMap from "../components/common/map";
+import axios from "axios";
+import { url } from "../constants";
+import Link from "next/link";
+import ArrowLeftIcon from "../components/icons/outline/arrowLeft";
+import BlogCard from "../components/common/blogCard";
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <div className="bg-white overflow-scroll no-scrollbar h-screen">
       <Head>
@@ -41,6 +46,29 @@ export default function Home() {
 
       {/* <Testimonials /> */}
       <Request />
+      {data?.blogs?.length > 0 && (
+        <section className="w-full px-4 md:px-0 bg-gray-50 py-6 md:py-10">
+          <div className="max-w-1200 space-y-6 mx-auto  ">
+            <Link href={"/blog"} passHref>
+              <a aria-label={"Healthcare Blogs"}>
+                <div className="flex justify-between">
+                  <h2 className="font-medium text-lg md:text-2xl">Our Blogs</h2>
+                  <h2 className="text-gray-500 cursor-pointer font-medium flex gap-2 items-center">
+                    <p>View All</p>
+                    <ArrowLeftIcon className="h-4 w-5 text-gray-600" />
+                  </h2>
+                </div>
+              </a>
+            </Link>
+
+            <div className="flex flex-row overflow-scroll no-scrollbar gap-6">
+              {data?.blogs?.map((value) => (
+                <BlogCard value={value} key={value._id} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
       <div className="bg-[url('/home/teamanoth.jpeg')] mt-20 bg-cover bg-no-repeat  bg-bottom-center  w-full aspect-[899/250]">
         <div className="bg-[url('/home/justbg.png')] bg-cover bg-right-top w-full   h-full" />
       </div>
@@ -100,4 +128,17 @@ export default function Home() {
       <Footer />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  // Fetch data from an API or any other source
+  const { data } = await axios.get(`${url}/home`);
+
+  return {
+    props: {
+      data,
+    },
+    // Incremental Static Regeneration (ISR)
+    revalidate: 300, // seconds, allows for re-fetching the data
+  };
 }

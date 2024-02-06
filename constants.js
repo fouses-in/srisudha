@@ -3,7 +3,9 @@ import Regulation from "./components/icons/regulation";
 import Risk from "./components/icons/risk";
 import Startup from "./components/icons/startup";
 import Taxation from "./components/icons/taxation";
-export const url = "https://65.1.74.109/customer";
+export const url =
+  //  "http://localhost:4000/customer";
+  "https://65.1.74.109/customer";
 export const services = [
   {
     Icon: Taxation,

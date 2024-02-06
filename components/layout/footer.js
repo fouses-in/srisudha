@@ -119,10 +119,10 @@ export default function Footer() {
       </div>
       <div className="bg-black py-6  text-white">
         <p className="max-w-1200 mx-auto px-4 xl:px-0 text-sm md:text-base text-center pb-4">
-          2023 &#169; Srisudha Consultancy Services Private Limited. All Right
-          Reserved. | Developed with 🤍 in india by team
+          2024 &#169; Srisudha Consultancy Services Private Limited. All Right
+          Reserved. | Developed with 🤍 in India by Team
           <a href="https://fouses.com" target="_blank">
-            <span className="text-primary">#Fouses</span>
+            <span className="text-primary"> #Fouses</span>
           </a>
         </p>
       </div>

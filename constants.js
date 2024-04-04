@@ -5,7 +5,7 @@ import Startup from "./components/icons/startup";
 import Taxation from "./components/icons/taxation";
 export const url =
   //  "http://localhost:4000/customer";
-  "https://65.1.74.109/customer";
+  "https://backend.srisudhaconsultancy.com/customer";
 export const services = [
   {
     Icon: Taxation,

@@ -4,7 +4,7 @@ import Risk from "./components/icons/risk";
 import Startup from "./components/icons/startup";
 import Taxation from "./components/icons/taxation";
 export const url =
-  //  "http://localhost:4000/customer";
+  // "http://localhost:4000/customer";
   "https://backend.srisudhaconsultancy.com/customer";
 export const services = [
   {
